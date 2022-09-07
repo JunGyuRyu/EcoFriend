@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="my.application.ecogreen">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" /> <!-- SNS 로그인 자체가 인터넷 사용이므로 인터넷 권한 추가 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 위험권한(사용자에게 권한을 받아와야 함) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 사용자 위치 받아오기 위한 권한 설정 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".datas.MyData"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EcoGreen"
+        android:usesCleartextTraffic="true"
+        tools:node="merge"
+        tools:replace="android:icon">
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ApplicationDetails"
+            android:parentActivityName=".MainHomeActivity" />
+        <activity
+            android:name=".DetailItemList"
+            android:parentActivityName=".ApplicationDetails" />
+        <activity
+            android:name=".PrintPdf"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".PreviewPdf" />
+        <activity android:name=".AccountingSettingActivity" />
+        <activity android:name=".MainHomeActivity" />
+        <activity
+            android:name=".DisuseWasteActivity"
+            android:parentActivityName=".MainHomeActivity" />
+        <activity
+            android:name=".ReuseWasteActivity"
+            android:parentActivityName=".MainHomeActivity" />
+        <activity android:name=".deepLearningResult" />
+        <activity android:name=".GetDatabase" />
+        <activity android:name=".CheckItemList" />
+        <activity android:name=".PayCheck" />
+        <activity
+            android:name=".UnityPlayerActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection"
+            android:launchMode="singleTask"
+            android:process=":unityplayer"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="my.application.ecogreen.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
+
+    <!--    android:authorities="com.test.android.test.fileprovider"-->

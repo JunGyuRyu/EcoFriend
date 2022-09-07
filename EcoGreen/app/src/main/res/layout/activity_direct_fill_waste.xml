@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/normal_height"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/direct_fill"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_height"
+        android:layout_marginBottom="@dimen/content_padding"
+        android:background="@color/baro_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="@dimen/step_circle_size"
+            android:layout_height="@dimen/step_circle_size"
+            android:background="@drawable/step_circle_complete"
+            android:text="Step1"
+            android:gravity="center"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/border_height"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:background="@color/step_line" />
+
+        <TextView
+            android:layout_width="@dimen/step_circle_size"
+            android:layout_height="@dimen/step_circle_size"
+            android:background="@drawable/step_circle"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/border_height"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:background="@color/step_line" />
+
+        <TextView
+            android:layout_width="@dimen/step_circle_size"
+            android:layout_height="@dimen/step_circle_size"
+            android:background="@drawable/step_circle"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/border_height"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:background="@color/step_line" />
+
+        <TextView
+            android:layout_width="@dimen/step_circle_size"
+            android:layout_height="@dimen/step_circle_size"
+            android:background="@drawable/step_circle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:text="폐기하고 싶은 품목을 선택하거나, \n품목 인식 버튼을 선택해 이미지를 인식시켜주세요."
+            android:textSize="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/item_big_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/search_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/content_padding"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="품목 인식"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

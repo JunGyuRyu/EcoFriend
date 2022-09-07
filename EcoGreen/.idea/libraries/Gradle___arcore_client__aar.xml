@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :arcore_client:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/56c24a6a4eb26d3c21d2ab13b51a3128/jetified-arcore_client/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/56c24a6a4eb26d3c21d2ab13b51a3128/jetified-arcore_client/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/56c24a6a4eb26d3c21d2ab13b51a3128/jetified-arcore_client/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

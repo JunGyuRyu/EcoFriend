@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dip"
+    android:layout_height="200dip"
+    android:padding="@dimen/content_padding">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:text="PDF SAVE"
+        android:textColor="#717070"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/eamil_addr"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="저장하시겠습니까?"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/eamil_addr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_ok"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:hint="이메일 전송을 원하는 경우, 이메일 주소를 입력해주세요."
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textColorHint="@color/step_line"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickDialog"
+        android:text="CANCEL" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_cancel"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/btn_cancel"
+        android:onClick="onClickDialog"
+        android:text="OK" />
+
+</RelativeLayout>
