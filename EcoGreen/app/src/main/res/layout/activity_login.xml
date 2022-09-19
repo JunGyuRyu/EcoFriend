@@ -17,8 +17,8 @@
         android:layout_marginBottom="100dp"
         android:gravity="center"
         android:padding="20dp"
-        android:text="BARO"
-        android:textColor="@color/baro_title"
+        android:text="EcoFriend"
+        android:textColor="@color/ecofriend_title"
         style="@style/TextShadow"
         android:textSize="35dp"
         android:textStyle="bold" />
@@ -108,7 +108,7 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:background="@drawable/baro_logo"
+        android:background="@drawable/ecofriend_logo"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>
 

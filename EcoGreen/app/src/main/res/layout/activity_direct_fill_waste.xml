@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/border_height"
         android:layout_marginBottom="@dimen/content_padding"
-        android:background="@color/baro_button" />
+        android:background="@color/ecofriend_button" />
 
     <LinearLayout
         android:layout_width="match_parent"
