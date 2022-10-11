@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BARO</string>
+    <string name="app_name">EcoFriend</string>
 
     <string name="main_title">HOME</string>
     <string name="disuse_title">폐기 품목을 분석해드립니다</string>
@@ -36,9 +36,9 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-    <string name="slide_1_title">Hello BARO!</string>
+    <string name="slide_1_title">Hello EcoFriend!</string>
     <string name="slide_1_desc">이제 대형폐기물 폐기도\n
-        BARO를 통해 바로!</string>
+        EcoFriend를 통해 바로!</string>
 
     <string name="slide_2_title">REUSE WASTE</string>
     <string name="slide_2_desc">현재위치를 기반으로 해 \n

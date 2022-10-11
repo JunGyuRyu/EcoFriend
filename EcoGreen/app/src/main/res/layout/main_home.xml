@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/border_height"
         android:layout_marginBottom="@dimen/border_height"
-        android:background="@color/baro_button" />
+        android:background="@color/ecofriend_button" />
 
     <include
         layout="@layout/select_service_dialog"
