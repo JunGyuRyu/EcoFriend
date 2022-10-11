@@ -51,7 +51,7 @@ class DisuseWasteActivity : AppCompatActivity() {
     lateinit var mClassAdapter: ClassAdapter
 
     val database = Firebase.database
-    val myRef = database.getReference("gangbuk")
+    val myRef = database.getReference("nowon")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +62,7 @@ class DisuseWasteActivity : AppCompatActivity() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         startActivity(Intent(this@DisuseWasteActivity, MainHomeActivity::class.java))
     }
@@ -88,7 +89,7 @@ class DisuseWasteActivity : AppCompatActivity() {
             // 선택된 목록정보를 가져왔으면 이제 화면 이동
             val myIntent = Intent(this, GetDatabase::class.java)
 
-            if(MyData.prefs.getString("gps", "no gps") == "서울특별시 강북구") {
+            if(MyData.prefs.getString("gps", "no gps") == "서울특별시 노원구") {
                 myRef.addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val test = snapshot.child(clickedClass)
@@ -313,7 +314,7 @@ class DisuseWasteActivity : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("https://yolo-310016.du.r.appspot.com/yolo") // 애뮬레이터 실행 시 http://10.0.2.2:5000/dnn/yolo
+            .url("http://192.168.1.102:5000/dnn/yolo") // 애뮬레이터 실행 시 http://10.0.2.2:5000/dnn/yolo
             .post(requestBody)
             .build()
 

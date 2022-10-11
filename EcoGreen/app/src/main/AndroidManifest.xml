@@ -14,6 +14,10 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-feature android:glEsVersion="0x00030000" />
+    <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+
+
     <application
         android:name="my.application.ecofriend.datas.MyData"
         android:allowBackup="false"
@@ -24,6 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoFriend"
         android:usesCleartextTraffic="true"
+        android:exported="true"
         tools:node="merge"
         tools:replace="android:icon">
         <!--
@@ -37,36 +42,56 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-        <activity android:name="my.application.ecofriend.LoginActivity" />
+        <activity android:name="my.application.ecofriend.LoginActivity"
+            android:exported="true"/>
         <activity android:name="my.application.ecofriend.ApplicationDetails"
-            android:parentActivityName="my.application.ecofriend.MainHomeActivity" />
+            android:parentActivityName="my.application.ecofriend.MainHomeActivity"
+            android:exported="true"/>
         <activity
             android:name="my.application.ecofriend.DetailItemList"
-            android:parentActivityName="my.application.ecofriend.ApplicationDetails" />
+            android:parentActivityName="my.application.ecofriend.ApplicationDetails"
+            android:exported="true"/>
         <activity
             android:name="my.application.ecofriend.PrintPdf"
-            android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name="my.application.ecofriend.PreviewPdf" />
-        <activity android:name="my.application.ecofriend.AccountingSettingActivity" />
-        <activity android:name="my.application.ecofriend.MainHomeActivity" />
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.PreviewPdf"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.AccountingSettingActivity"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.MainHomeActivity"
+            android:exported="true"/>
         <activity
             android:name="my.application.ecofriend.DisuseWasteActivity"
-            android:parentActivityName="my.application.ecofriend.MainHomeActivity" />
+            android:parentActivityName="my.application.ecofriend.MainHomeActivity"
+            android:exported="true"/>
         <activity
             android:name="my.application.ecofriend.ReuseWasteActivity"
-            android:parentActivityName="my.application.ecofriend.MainHomeActivity" />
-        <activity android:name="my.application.ecofriend.deepLearningResult" />
-        <activity android:name="my.application.ecofriend.GetDatabase" />
-        <activity android:name="my.application.ecofriend.CheckItemList" />
-        <activity android:name="my.application.ecofriend.PayCheck" />
+            android:parentActivityName="my.application.ecofriend.MainHomeActivity"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.deepLearningResult"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.GetDatabase"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.CheckItemList"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.PayCheck"
+            android:exported="true"/>
+
         <activity
             android:name="my.application.ecofriend.UnityPlayerActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection"
-            android:launchMode="singleTask"
             android:process=":unityplayer"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name="my.application.ecofriend.MainActivity" />
-        <activity android:name="my.application.ecofriend.WelcomeActivity">
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+        </activity>
+
+        <activity android:name="my.application.ecofriend.MainActivity"
+            android:exported="true"/>
+        <activity android:name="my.application.ecofriend.WelcomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "386709508100-fut6du49se62kdr0k0aqg1ggbdhemal5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecofriend",
+            "certificate_hash": "e64842185b698d5249bab8e418c6f964660b82fe"
+          }
+        },
+        {
           "client_id": "386709508100-leavsb381nbtpd2i84i49s8ju944h2fq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -56,6 +64,14 @@
           "android_info": {
             "package_name": "my.application.ecogreen",
             "certificate_hash": "3c4da6d007dc3bf54d316c5677cebae03a1e060b"
+          }
+        },
+        {
+          "client_id": "386709508100-o2i5gs1tclidftoj2h741cga98aieujn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.application.ecogreen",
+            "certificate_hash": "e64842185b698d5249bab8e418c6f964660b82fe"
           }
         },
         {

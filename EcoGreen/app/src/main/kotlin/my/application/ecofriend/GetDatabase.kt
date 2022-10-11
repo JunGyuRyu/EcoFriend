@@ -1,3 +1,5 @@
+@file:Suppress("OverrideDeprecatedMigration")
+
 package my.application.ecofriend
 
 import android.content.Intent
@@ -10,6 +12,7 @@ import kotlinx.android.synthetic.main.item_list.view.*
 import my.application.ecofriend.adapters.ItemAdapter
 import my.application.ecofriend.datas.Item
 
+@Suppress("OverrideDeprecatedMigration")
 class GetDatabase : dbBaseActivity() {
 
     // 액티비티에서 실제 목록을 담아줄 ArrayList를 만들고 실제 데이터들을 담기

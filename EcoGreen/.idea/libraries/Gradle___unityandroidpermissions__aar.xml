@@ -2,9 +2,9 @@
   <library name="Gradle: :unityandroidpermissions:@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cc3536a4d40710389b25a6b5513dffe2/jetified-unityandroidpermissions/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d7711cecf52430961b7972029084b540/jetified-unityandroidpermissions/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d7711cecf52430961b7972029084b540/jetified-unityandroidpermissions/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d7711cecf52430961b7972029084b540/jetified-unityandroidpermissions/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d712dd2b4e6a79a4cce443c7a3baaf30/transformed/jetified-unityandroidpermissions/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d712dd2b4e6a79a4cce443c7a3baaf30/transformed/jetified-unityandroidpermissions/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
