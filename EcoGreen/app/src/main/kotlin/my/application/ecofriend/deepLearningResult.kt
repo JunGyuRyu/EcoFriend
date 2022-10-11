@@ -15,11 +15,11 @@ class deepLearningResult: AppCompatActivity() {
     var mTempmList = ArrayList<Item>()
 
     val database = Firebase.database
-    val myRef = database.getReference("gangbuk")
+    val myRef = database.getReference("nowon")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (intent.getStringExtra("result") == "wardrobe") {
+        if (intent.getStringExtra("result") == "sofa") {
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val test = snapshot.child("가구·침구류")
