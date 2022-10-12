@@ -19,11 +19,11 @@ class deepLearningResult: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         if (intent.getStringExtra("result") == "sofa") {
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val test = snapshot.child("가구·침구류")
-
                     for (data in test.children) {
                         if (data.child("item").value == "장롱") {
                             mTempmList.add(

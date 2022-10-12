@@ -4,15 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import my.application.ecofriend.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private val RC_SIGN_IN = 1000
+    private var mBinding: ActivityMainBinding? = null
+    private val binding get() = mBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        //setContentView(R.layout.activity_main)
+        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         checkPreviousLogin()
 
     }

@@ -11,6 +11,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_detail_list.*
 import my.application.ecofriend.adapters.PdfAdapter
+import my.application.ecofriend.databinding.ActivityDetailListBinding
 import my.application.ecofriend.datas.PdfItem
 import kotlin.collections.ArrayList
 
@@ -27,10 +28,14 @@ class DetailItemList : dbBaseActivity() {
     private lateinit var ListAdapter: PdfAdapter
     val database = Firebase.database
     val myRef = database.getReference("regtb")
+    private var mBinding: ActivityDetailListBinding? = null
+    private val binding get() = mBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_list)
+        //setContentView(R.layout.activity_detail_list)
+        mBinding = ActivityDetailListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         requestDate = intent.getSerializableExtra("requestDate").toString()
         total = intent.getSerializableExtra("total") as Long

@@ -15,6 +15,8 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_paycheck.*
+import my.application.ecofriend.databinding.ActivityPaycheckBinding
+import my.application.ecofriend.databinding.ProgressDbwaitBinding
 import my.application.ecofriend.datas.DetailItem
 import java.util.*
 
@@ -26,10 +28,16 @@ class PayCheck :AppCompatActivity() {
     val myRef = database.getReference("regtb")
 
     private lateinit var progressDialog: AppCompatDialog
+    private var mBinding: ActivityPaycheckBinding? = null
+    private val binding get() = mBinding!!
+    private var mBinding2: ProgressDbwaitBinding? = null
+    private val binding2 get() = mBinding2!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_paycheck)
+        //setContentView(R.layout.activity_paycheck)
+        mBinding = ActivityPaycheckBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //date
         date.text = intent.getStringExtra("requestDate")
@@ -87,7 +95,10 @@ class PayCheck :AppCompatActivity() {
         progressDialog = AppCompatDialog(this)
         progressDialog.setCancelable(true)
         progressDialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        progressDialog.setContentView(R.layout.progress_dbwait)
+        //progressDialog.setContentView(R.layout.progress_dbwait)
+        mBinding2 = ProgressDbwaitBinding.inflate(layoutInflater)
+        progressDialog.setContentView(binding2.root)
+
         progressDialog.show()
         var img_loading_framge = progressDialog.findViewById<ImageView>(R.id.iv_frame_loading)
         var frameAnimation = img_loading_framge?.getBackground() as AnimationDrawable

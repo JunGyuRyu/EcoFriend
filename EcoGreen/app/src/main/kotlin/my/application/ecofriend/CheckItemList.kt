@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.checked_list.*
 import my.application.ecofriend.adapters.ListAdapter
+import my.application.ecofriend.databinding.CheckedListBinding
 import my.application.ecofriend.datas.CheckedItem
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,9 +23,14 @@ class CheckItemList : dbBaseActivity() {
     val dbHelper = DBHelper(this, "ItemList.db", null, 1)
     val detailDB = detailDB(this, "DetailList.db", null, 1)
 
+    private var mBinding: CheckedListBinding? = null
+    private val binding get() = mBinding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.checked_list)
+        //setContentView(R.layout.checked_list)
+        mBinding = CheckedListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setValues()
         setupEvents()

@@ -10,6 +10,7 @@ import androidx.core.view.get
 import kotlinx.android.synthetic.main.direct_chooser.*
 import kotlinx.android.synthetic.main.item_list.view.*
 import my.application.ecofriend.adapters.ItemAdapter
+import my.application.ecofriend.databinding.DirectChooserBinding
 import my.application.ecofriend.datas.Item
 
 @Suppress("OverrideDeprecatedMigration")
@@ -21,11 +22,19 @@ class GetDatabase : dbBaseActivity() {
     // 만들어둔 Adapter 클래스를 액티비티에 있는 리스트뷰와 연결
     lateinit var mItemAdapter: ItemAdapter
 
+    private var mBinding: DirectChooserBinding? = null
+    private val binding get() = mBinding!!
+
+
+
     val dbHelper = DBHelper(this, "ItemList.db", null, 1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.direct_chooser)
+        //setContentView(R.layout.direct_chooser)
+        mBinding = DirectChooserBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         if(intent.hasExtra("mItemList")) {
             mItemList = intent.getSerializableExtra("mItemList") as ArrayList<Item>
