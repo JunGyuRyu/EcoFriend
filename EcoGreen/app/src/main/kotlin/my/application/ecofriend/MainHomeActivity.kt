@@ -25,6 +25,8 @@ import kotlinx.android.synthetic.main.activity_reuse.*
 import kotlinx.android.synthetic.main.main_home.*
 import kotlinx.android.synthetic.main.main_home.change_addr
 import kotlinx.android.synthetic.main.select_service_dialog.*
+import my.application.ecofriend.databinding.MainHomeBinding
+import my.application.ecofriend.databinding.ProgressDbwaitBinding
 import my.application.ecofriend.datas.DetailItem
 import my.application.ecofriend.datas.MyData
 import java.io.IOException
@@ -44,10 +46,17 @@ class MainHomeActivity : AppCompatActivity(){
     val myRef = database.getReference("regtb")
 
     private lateinit var progressDialog: AppCompatDialog
+    private var mBinding: MainHomeBinding? = null
+    private val binding get() = mBinding!!
+    private var mBinding2: ProgressDbwaitBinding? = null
+    private val binding2 get() = mBinding2!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_home)
+        //setContentView(R.layout.main_home)
+        mBinding = MainHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         getCurrentLoc()
 
@@ -214,7 +223,10 @@ class MainHomeActivity : AppCompatActivity(){
         progressDialog = AppCompatDialog(this)
         progressDialog.setCancelable(true)
         progressDialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        progressDialog.setContentView(R.layout.progress_dbwait)
+        //progressDialog.setContentView(R.layout.progress_dbwait)
+        mBinding2 = ProgressDbwaitBinding.inflate(layoutInflater)
+        progressDialog.setContentView(binding2.root)
+
         progressDialog.show()
         var img_loading_framge = progressDialog.findViewById<ImageView>(R.id.iv_frame_loading)
         var frameAnimation = img_loading_framge?.getBackground() as AnimationDrawable

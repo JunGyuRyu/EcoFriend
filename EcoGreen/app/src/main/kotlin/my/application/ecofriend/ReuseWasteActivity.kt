@@ -5,12 +5,19 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import kotlinx.android.synthetic.main.activity_reuse.*
+import my.application.ecofriend.databinding.ActivityReuseBinding
 
 class ReuseWasteActivity : AppCompatActivity() {
+    private var mBinding: ActivityReuseBinding? = null
+    private val binding get() = mBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reuse)
+        //setContentView(R.layout.activity_reuse)
+        mBinding = ActivityReuseBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
         var myUriString : String = " "
         var site = resources.getStringArray(R.array.site)
         var region = resources.getStringArray(R.array.seoul_region)

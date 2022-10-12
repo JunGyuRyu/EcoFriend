@@ -27,6 +27,8 @@ import kotlinx.android.synthetic.main.item_big_class.*
 import kotlinx.android.synthetic.main.main_analyze_view.*
 import kotlinx.android.synthetic.main.pdf_list.*
 import my.application.ecofriend.adapters.ClassAdapter
+import my.application.ecofriend.databinding.ActivityDirectFillWasteBinding
+import my.application.ecofriend.databinding.ProgressDialogBinding
 import my.application.ecofriend.datas.Item
 import my.application.ecofriend.datas.MyData
 import okhttp3.*
@@ -53,9 +55,17 @@ class DisuseWasteActivity : AppCompatActivity() {
     val database = Firebase.database
     val myRef = database.getReference("nowon")
 
+    private var mBinding: ActivityDirectFillWasteBinding? = null
+    private val binding get() = mBinding!!
+    private var mBinding2: ProgressDialogBinding? =null
+    private val binding2 get() = mBinding2!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_direct_fill_waste)
+        //setContentView(R.layout.activity_direct_fill_waste)
+        mBinding = ActivityDirectFillWasteBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
         setupListener()
         setupValue()
@@ -314,7 +324,7 @@ class DisuseWasteActivity : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("http://192.168.1.102:5000/dnn/yolo") // 애뮬레이터 실행 시 http://10.0.2.2:5000/dnn/yolo
+            .url("http://192.168.1.102:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
             .post(requestBody)
             .build()
 
@@ -357,7 +367,10 @@ class DisuseWasteActivity : AppCompatActivity() {
         progressDialog = AppCompatDialog(this)
         progressDialog.setCancelable(true)
         progressDialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        progressDialog.setContentView(R.layout.progress_dialog)
+        //progressDialog.setContentView(R.layout.progress_dialog)
+        mBinding2 = ProgressDialogBinding.inflate(layoutInflater)
+        progressDialog.setContentView(binding2.root)
+
         progressDialog.show()
         var img_loading_framge = progressDialog.findViewById<ImageView>(R.id.iv_frame_loading)
         var frameAnimation = img_loading_framge?.getBackground() as AnimationDrawable

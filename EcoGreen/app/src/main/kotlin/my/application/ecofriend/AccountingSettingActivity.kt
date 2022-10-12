@@ -6,11 +6,18 @@ import android.os.Bundle
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import kotlinx.android.synthetic.main.activity_accounting_setting.*
+import my.application.ecofriend.databinding.ActivityAccountingSettingBinding
 
 class AccountingSettingActivity : AppCompatActivity() {
+
+    private var mBinding: ActivityAccountingSettingBinding? = null
+    private val binding get() = mBinding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_accounting_setting)
+        //setContentView(R.layout.activity_accounting_setting)
+        mBinding = ActivityAccountingSettingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setUpListener()
     }

@@ -40,6 +40,7 @@ public class PrintPdf extends Activity {
 
     FirebaseAuth auth=FirebaseAuth.getInstance();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

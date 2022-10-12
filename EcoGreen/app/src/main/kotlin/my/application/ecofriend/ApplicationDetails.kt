@@ -12,6 +12,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.detail_list.*
 import kotlinx.android.synthetic.main.detail_list_form.*
 import my.application.ecofriend.adapters.DetailAdapter
+import my.application.ecofriend.databinding.DetailListBinding
 import my.application.ecofriend.datas.DetailItem
 
 
@@ -23,10 +24,14 @@ class ApplicationDetails : dbBaseActivity() {
     private var phoneNum:String = ""
     val database = Firebase.database
     val myRef = database.getReference("regtb")
+    private var mBinding: DetailListBinding? = null
+    private val binding get() = mBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.detail_list)
+        //setContentView(R.layout.detail_list)
+        mBinding = DetailListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         if(intent.hasExtra("mDetailList")) {
             mDetailList = intent.getSerializableExtra("mDetailList") as ArrayList<DetailItem>
