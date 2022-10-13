@@ -3,5 +3,5 @@
     <gradient
         android:angle="270"
         android:startColor="#FFFFFF"
-        android:endColor="@color/baro_main"/>
+        android:endColor="@color/ecofriend_main"/>
 </shape>
