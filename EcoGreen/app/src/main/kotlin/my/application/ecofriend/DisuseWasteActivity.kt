@@ -104,18 +104,18 @@ class DisuseWasteActivity : AppCompatActivity() {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val test = snapshot.child(clickedClass)
 
-                        for (data in test.children) {
+                        //for (data in test.children) {      보여줄 item(장롱 등)갯수
                             mItem.add(
                                 Item(
                                     false,
                                     clickedClass,
-                                    data.child("dockey").value as String,
-                                    data.child("item").value as String?,
-                                    data.child("standard").value as String?,
-                                    data.child("levy_amt").value as Long
+                                    test.child("dockey").value as String,
+                                    test.child("item").value as String?,
+                                    test.child("standard").value as String?,
+                                    test.child("levy_amt").value as Long
                                 ))
 
-                        }
+                        //}
 
                         // 정보를 담아주기
                         myIntent.putExtra("mItemList", mItem)
@@ -324,7 +324,7 @@ class DisuseWasteActivity : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("http://10.50.88.35:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
+            .url("http://192.168.1.102:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
             .post(requestBody)
             .build()
 
