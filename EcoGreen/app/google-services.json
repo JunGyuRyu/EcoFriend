@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "386709508100",
+    "firebase_url": "https://ecofriend-eb774-default-rtdb.firebaseio.com",
     "project_id": "ecofriend-eb774",
     "storage_bucket": "ecofriend-eb774.appspot.com"
   },
@@ -27,6 +28,51 @@
           "android_info": {
             "package_name": "com.example.ecofriend",
             "certificate_hash": "e64842185b698d5249bab8e418c6f964660b82fe"
+          }
+        },
+        {
+          "client_id": "386709508100-leavsb381nbtpd2i84i49s8ju944h2fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDApjLOKJjk-4K-_CgAu1uoDmTWKdFhu-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386709508100-leavsb381nbtpd2i84i49s8ju944h2fq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386709508100:android:b75193cd6d074b76b5e551",
+        "android_client_info": {
+          "package_name": "my.application.ecofriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386709508100-32fd347miadeiqil0880piu5951j1bnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.application.ecofriend",
+            "certificate_hash": "e64842185b698d5249bab8e418c6f964660b82fe"
+          }
+        },
+        {
+          "client_id": "386709508100-mu5fbt0m1sl5tt8discvi0pfhh1bvuq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.application.ecofriend",
+            "certificate_hash": "3c4da6d007dc3bf54d316c5677cebae03a1e060b"
           }
         },
         {
