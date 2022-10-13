@@ -25,15 +25,15 @@ class deepLearningResult: AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val test = snapshot.child("가구·침구류")
                     for (data in test.children) {
-                        if (data.value == "장롱") {
+                        if (data.value == "장롱") {   //if (data.child("item").value == "장롱")에서 바꿈
                             mTempmList.add(
                                 Item(
                                     false,
                                     "가구·침구류",
-                                    test.child("dockey").value as String,
+                                    test.child("dockey").value as String, //data.child에서 바꿈
                                     "장롱",
-                                    test.child("standard").value as String?,
-                                    test.child("levy_amt").value as Long
+                                    test.child("standard").value as String?, //data.child에서 바꿈
+                                    test.child("levy_amt").value as Long //data.child에서 바꿈
                                 ))
                         }
                     }
