@@ -20,20 +20,20 @@ class deepLearningResult: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (intent.getStringExtra("result") == "sofa") {
+        if (intent.getStringExtra("result") == "wardrobe") {
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val test = snapshot.child("가구·침구류")
                     for (data in test.children) {
-                        if (data.child("item").value == "장롱") {
+                        if (data.value == "장롱") {
                             mTempmList.add(
                                 Item(
                                     false,
                                     "가구·침구류",
-                                    data.child("dockey").value as String,
+                                    test.child("dockey").value as String,
                                     "장롱",
-                                    data.child("standard").value as String?,
-                                    data.child("levy_amt").value as Long
+                                    test.child("standard").value as String?,
+                                    test.child("levy_amt").value as Long
                                 ))
                         }
                     }
