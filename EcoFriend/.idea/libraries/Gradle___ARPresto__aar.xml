@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: :ARPresto:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d5ac3c25d2858ed0ee0dcf2215b95f2/jetified-ARPresto/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3d6cdaa0cdf04667f53032fdb3eda1d7/jetified-ARPresto/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1411c49a779e3b57145245135641286a/transformed/jetified-ARPresto/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1411c49a779e3b57145245135641286a/transformed/jetified-ARPresto/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
