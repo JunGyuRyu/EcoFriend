@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".DisuseWasteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_height"
+        android:gravity="center"
+        android:text="@string/disuse_title"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_height"
+        android:background="@color/boarder_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/content_padding"
+        android:paddingRight="@dimen/content_padding">
+
+        <TextView
+            android:id="@+id/addr"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:text="현재 주소: "
+            android:textColor="#1B1A1A" />
+
+        <Spinner
+            android:id="@+id/change_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/content_padding"
+            android:layout_weight="5"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/seoul_region" />
+
+    </LinearLayout>
+
+<!--    <include-->
+<!--        layout="@layout/main_analyze_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1" />-->
+
+    <TextView
+        android:id="@+id/upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/content_padding"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="@string/select_item"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

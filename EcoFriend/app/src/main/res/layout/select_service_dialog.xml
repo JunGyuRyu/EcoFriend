@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="@dimen/content_padding"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <ImageView
+                android:id="@+id/reuse_image"
+                android:layout_width="300dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:src="@drawable/reuse" />
+
+            <TextView
+                android:id="@+id/reuse_waste"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/content_padding"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="@string/reuse_waste"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/disuse_image"
+                android:layout_width="300dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:src="@drawable/disuse" />
+
+            <TextView
+                android:id="@+id/disuse_waste"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_margin="@dimen/content_padding"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="@string/disuse_waste"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
