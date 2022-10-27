@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EcoGreen.iml" filepath="$PROJECT_DIR$/.idea/modules/EcoGreen.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoGreen.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EcoFriend.iml" filepath="$PROJECT_DIR$/.idea/modules/EcoFriend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EcoFriend.app.unitTest.iml" />
     </modules>
   </component>
 </project>
