@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("my.application.ecogreen", appContext.packageName)
+        assertEquals("my.application.ecofriend", appContext.packageName)
     }
 }

@@ -11,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "my.application.ecogreen"
+        applicationId "my.application.ecofriend"
         minSdkVersion 26
         targetSdkVersion 33
         versionCode 1
