@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.graphics.Matrix
 import android.graphics.drawable.AnimationDrawable
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -22,10 +23,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_direct_fill_waste.*
-import kotlinx.android.synthetic.main.activity_reuse.*
 import kotlinx.android.synthetic.main.item_big_class.*
-import kotlinx.android.synthetic.main.main_analyze_view.*
-import kotlinx.android.synthetic.main.pdf_list.*
 import my.application.ecofriend.adapters.ClassAdapter
 import my.application.ecofriend.databinding.ActivityDirectFillWasteBinding
 import my.application.ecofriend.databinding.ProgressDialogBinding
@@ -289,11 +287,13 @@ class DisuseWasteActivity : AppCompatActivity() {
         }
     }
 
-    fun resizeBitmap(original: Bitmap) : Bitmap {
+    fun resizeBitmap(original: Bitmap): Bitmap {
         val resizeWidth = 416;
         val resizeHeight = 416;
-        val result: Bitmap = Bitmap.createScaledBitmap(original, resizeWidth, resizeHeight, false);
-        return result;
+        val result: Bitmap = Bitmap.createScaledBitmap(original, resizeWidth, resizeHeight, true);
+        val matrix = Matrix()
+        matrix.postRotate(90F)
+        return Bitmap.createBitmap(result, 0, 0, resizeWidth, resizeHeight, matrix, true);
     }
 
     fun send2Server(bitmap: Bitmap) {
@@ -324,7 +324,7 @@ class DisuseWasteActivity : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("http://192.168.1.100:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
+            .url("http://10.50.58.144:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
             .post(requestBody)
             .build()
 
