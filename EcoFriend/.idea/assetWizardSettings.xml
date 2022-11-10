@@ -79,8 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\hush0\Desktop\서과기\4학년1학기\졸작\ECOGREEN\Android Studio\EcoGreen\app\src\main\res\drawable-hdpi\ecofriend_logo.png" />
-                                                <entry key="scalingPercent" value="46" />
+                                                <entry key="imagePath" value="C:\Users\hush0\Desktop\서과기\4학년2학기\logo.png" />
+                                                <entry key="scalingPercent" value="55" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -113,7 +113,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="56ffec" />
+                                      <entry key="backgroundColor" value="7ed857" />
                                       <entry key="outputName" value="ic_launcher_new" />
                                     </map>
                                   </option>

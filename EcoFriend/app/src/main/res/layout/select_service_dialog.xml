@@ -24,7 +24,7 @@
                 android:layout_width="300dp"
                 android:layout_height="220dp"
                 android:layout_gravity="center"
-                android:src="@drawable/reuse" />
+                android:src="@drawable/reuse_simple" />
 
             <TextView
                 android:id="@+id/reuse_waste"
@@ -43,7 +43,7 @@
                 android:layout_width="300dp"
                 android:layout_height="220dp"
                 android:layout_gravity="center"
-                android:src="@drawable/disuse" />
+                android:src="@drawable/disuse_simple" />
 
             <TextView
                 android:id="@+id/disuse_waste"
