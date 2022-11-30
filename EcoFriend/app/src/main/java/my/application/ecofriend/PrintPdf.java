@@ -71,7 +71,7 @@ public class PrintPdf extends Activity {
     }
 
     private void createPDF() {
-        EditText emailAddr = findViewById(R.id.eamil_addr);
+        EditText emailAddr = findViewById(R.id.email_addr);
         dateObj = new Date();
 
         if (price.length() == 0 || selectedDate.length() == 0 || mList.size() == 0) {

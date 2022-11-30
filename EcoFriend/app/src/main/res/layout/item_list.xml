@@ -8,17 +8,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!--        품목을 설명할 수 있는 이미지 추가 탭-->
-        <ImageView
-            android:id="@+id/imgTxt"
-            android:layout_width="90dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_launcher_foreground" />
-
         <!--        품목 관련 정보(대분류, 항목, 규격, 수수료)-->
         <LinearLayout
-            android:layout_width="230dp"
-            android:layout_height="match_parent"
+            android:layout_width="330dp"
+            android:layout_height="100dp"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingLeft="15dp">
@@ -28,6 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:layout_marginLeft="30dp"
                 android:text="가전제품"
                 android:textSize="12sp" />
 
@@ -35,6 +29,7 @@
                 android:id="@+id/itemTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
                 android:text="냉장고 / 300L 이상"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -44,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
+                android:layout_marginLeft="30dp"
                 android:text="6000"
                 android:textSize="18sp" />
 
@@ -51,8 +47,9 @@
 
         <!--        품목 선택 여부 확인을 위한 체크박스 추가-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="right">
 
             <CheckBox
                 android:id="@+id/checkBox"

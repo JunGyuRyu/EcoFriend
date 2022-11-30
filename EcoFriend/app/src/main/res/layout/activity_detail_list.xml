@@ -33,7 +33,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#8034A08C"
+                android:background="#00C800"
                 android:padding="10dp">
 
                 <TextView
@@ -99,6 +99,6 @@
         android:layout_margin="@dimen/content_padding"
         android:background="@drawable/button_cancle"
         android:enabled="false"
-        android:text="신고필증 발급불가\n(입금 먼저 진행해주세요.)" />
+        android:text="신고필증 발급불가\n(입금이 확인되면 가능)" />
 
 </LinearLayout>

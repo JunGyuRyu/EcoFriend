@@ -80,7 +80,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginRight="45dp"
             android:gravity="center"
-            android:text="폐기하고 싶은 품목을 선택하거나, \n품목 인식 버튼을 선택해 이미지를 인식시켜주세요."
+            android:text="폐기하고 싶은 품목을 목록에서 선택하거나, \n품목 인식 버튼으로 이미지를 인식시켜주세요."
             android:textSize="10dp"/>
 
     </LinearLayout>

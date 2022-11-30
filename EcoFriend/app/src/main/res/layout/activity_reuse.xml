@@ -45,7 +45,7 @@
                 android:text="@string/reuse_waste"
                 android:textColor="@color/white"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

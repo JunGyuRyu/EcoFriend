@@ -276,7 +276,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#8034A08C"
+                        android:background="#00C800"
                         android:padding="10dp">
 
                         <TextView
