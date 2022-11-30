@@ -324,7 +324,8 @@ class DisuseWasteActivity : AppCompatActivity() {
             .build()
 
         val request: Request = Request.Builder()
-            .url("http://10.50.58.144:5000/dnn/yolo") // 애뮬레이터 실행 시 http://192.168.1.102:5000/dnn/yolo
+            .url("https://capstone-design-22-3-9.df.r.appspot.com/dnn/yolo")
+            // .url("http://192.168.1.101:5000/dnn/yolo") // http://127.0.0.1:5000/dnn/yolo
             .post(requestBody)
             .build()
 

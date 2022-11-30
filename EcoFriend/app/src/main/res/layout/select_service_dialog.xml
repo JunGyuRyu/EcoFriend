@@ -18,44 +18,36 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-        <ImageView
-                android:id="@+id/reuse_image"
-                android:layout_width="300dp"
-                android:layout_height="220dp"
-                android:layout_gravity="center"
-                android:src="@drawable/reuse_simple" />
-
-            <TextView
+        <TextView
                 android:id="@+id/reuse_waste"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/button_height"
-                android:layout_margin="@dimen/content_padding"
-                android:background="@drawable/button_background"
-                android:gravity="center"
-                android:text="@string/reuse_waste"
-                android:textColor="@color/white"
-                android:textSize="@dimen/title_size"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/disuse_image"
                 android:layout_width="300dp"
                 android:layout_height="220dp"
                 android:layout_gravity="center"
-                android:src="@drawable/disuse_simple" />
+                android:layout_margin="32dp"
+                android:background="@drawable/reuse_simple"
+                android:gravity="bottom|center"
+                android:text="[Reuse]"
+                android:textColor="#008D62"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+            />
+
 
             <TextView
                 android:id="@+id/disuse_waste"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/button_height"
+                android:layout_width="300dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
                 android:layout_margin="@dimen/content_padding"
-                android:background="@drawable/button_background"
-                android:gravity="center"
-                android:text="@string/disuse_waste"
-                android:textColor="@color/white"
-                android:textSize="@dimen/title_size"
-                android:textStyle="bold" />
+                android:background="@drawable/disuse_simple"
+                android:gravity="bottom|center"
+                android:text="[DISUSE]"
+                android:textColor="#008D62"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"
+                />
         </LinearLayout>
 
     </ScrollView>

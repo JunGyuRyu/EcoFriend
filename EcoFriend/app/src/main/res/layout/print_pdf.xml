@@ -21,7 +21,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:layout_above="@+id/eamil_addr"
+        android:layout_above="@+id/email_addr"
         android:layout_marginTop="8dp"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="10dp"
@@ -30,7 +30,7 @@
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/eamil_addr"
+        android:id="@+id/email_addr"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_ok"
@@ -48,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="#7ED956"
         android:onClick="onClickDialog"
         android:text="CANCEL" />
 
@@ -58,6 +59,7 @@
         android:layout_alignBottom="@+id/btn_cancel"
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/btn_cancel"
+        android:backgroundTint="#7ED956"
         android:onClick="onClickDialog"
         android:text="OK" />
 
